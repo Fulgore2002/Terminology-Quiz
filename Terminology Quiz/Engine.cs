@@ -84,41 +84,13 @@ namespace Terminology_Quiz
 
 
         //FOURTH
-        private void StartQuiz(int quizLength = 10)
+        private void StartQuiz(int quizLength = 10) //default can be set as parameter
         {
-            if (quiz.TermsAndDefinitions.Count == 0)
-            {
-                Print("No data available to start the quiz.");
-                return;
-            }
 
-            Random random = new Random();
-            List<string> keys = quiz.TermsAndDefinitions.Keys.ToList();
+            //add code here 
+            //show dictionary data as quiz
+            //for (int i=0; i< quizLength; i++) {//add additional code here}
 
-            for (int i = 0; i < Math.Min(quizLength, keys.Count); i++)
-            {
-                string term = keys[random.Next(keys.Count)];
-                Show($"What is the definition of '{term}'? ");
-                string answer = ReadLine();
-
-                if (answer?.Trim().Equals(quiz.TermsAndDefinitions[term], StringComparison.OrdinalIgnoreCase) == true)
-                {
-                    Print("Correct!");
-                }
-                else
-                {
-                    Print($"Wrong! The correct definition is: {quiz.TermsAndDefinitions[term]}");
-                }
-            }
-        }
-
-        private void Print(string output) => WriteLine($"{output}");
-        private void Show(string output) => Write($"{output}");
-        private void Pause()
-        {
-            Print("Press any key to continue...");
-            ReadKey();
-            Clear();
         }
 
 
