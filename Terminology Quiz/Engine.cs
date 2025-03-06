@@ -120,16 +120,6 @@ namespace Terminology_Quiz
             ReadKey();
             Clear();
         }
-
-
-        private void Print(string output) => WriteLine($"{output}");
-        private void Show(string output) => Write($"{output}");
-        private void Pause()
-        {
-            Print("Press any key to continue...");
-            ReadKey();
-            Clear();
-        }
         private string TermSearch()
         {
             Show("Enter a term to search for: ");
