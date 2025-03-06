@@ -11,7 +11,7 @@ namespace Terminology_Quiz
     {
         static void Main(string[] args)
         {
-            Console.Title = "";
+            Console.Title = "Terminology Quiz";
             Engine engine = new Engine();
             engine.Start();
         }
